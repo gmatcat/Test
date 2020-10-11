@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/viewTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/user_bg"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineCoverBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civProfileImage"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@color/Black"
+            app:civ_border_color="@color/White"
+            app:civ_border_width="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelinePhotoBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/amiko_bold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/White"
+            android:text="@string/lorem_ipsum"
+            android:textSize="@dimen/_20ssp"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineNameBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/civProfileImage" />
+
+
+        <TextView
+            android:id="@+id/tvFollowingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text="22"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineCoverBottom"
+            app:layout_constraintEnd_toEndOf="@+id/viewTop"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvFollowerCount"
+            app:layout_constraintTop_toTopOf="@id/guidelineNameBottom"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/tvFollowerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text="22"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineCoverBottom"
+            app:layout_constraintEnd_toStartOf="@+id/tvFollowingCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/viewTop"
+            app:layout_constraintTop_toTopOf="@id/guidelineNameBottom"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/amiko_regular"
+            android:text="@string/followers"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@id/tvFollowerCount"
+            app:layout_constraintStart_toStartOf="@id/tvFollowerCount"
+            app:layout_constraintTop_toBottomOf="@id/tvFollowerCount" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/amiko_regular"
+            android:text="Following"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@id/tvFollowingCount"
+            app:layout_constraintStart_toStartOf="@id/tvFollowingCount"
+            app:layout_constraintTop_toBottomOf="@id/tvFollowingCount" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCoverBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_300sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinePhotoBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_150sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineNameBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_220sdp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/Dark_Slate_Grey"
+            app:layout_constraintTop_toBottomOf="@id/guidelineCoverBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/White"
+            android:text="@string/lorem_ipsum"
+            android:textSize="@dimen/_16ssp"
+            android:ellipsize="end"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/guidelineCoverBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBlog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/White"
+            android:text="@string/lorem_ipsum"
+            android:textSize="@dimen/_16ssp"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvCompany"
+            app:layout_constraintEnd_toEndOf="@id/tvCompany"
+            app:layout_constraintStart_toStartOf="@id/tvCompany"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/White"
+            android:text="Notes"
+            android:textSize="@dimen/_12ssp"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvBlog"
+            app:layout_constraintStart_toStartOf="@id/tvBlog"
+            />
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            style="@style/NotesEditText"
+            android:fontFamily="@font/amiko_regular"
+            android:textColor="@color/Black"
+            android:singleLine="false"
+            android:scrollbars="vertical"
+            android:gravity="start|top"
+            android:privateImeOptions="nm"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:hint="@string/enter_note_here"
+            android:textColorHint="@color/Gray"
+            android:text="@string/lorem_ipsum"
+            app:layout_constraintTop_toBottomOf="@id/tvNotesLabel"
+            app:layout_constraintStart_toStartOf="@id/tvBlog"
+            app:layout_constraintEnd_toEndOf="@id/tvBlog"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/etNote"
+            app:layout_constraintTop_toBottomOf="@id/etNote"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:fontFamily="@font/amiko_regular"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/White"
+            android:background="@drawable/save_bg_selector"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
